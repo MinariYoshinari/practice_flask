@@ -15,21 +15,29 @@ def search_result():
     GET元: top
     render先: search_result.html?
     入力: 
-        {出発地，到着地，(あれば)経由地の地点名}
+        出発地origin，到着地destination，(あれば)経由地の地点名waypoints
         または
-        {starかunstarか, star/unstarされたお店の一通りの情報}
+        starかunstarか(is_stared), star/unstarされたお店の一通りの情報(store: 辞書の中身は出力に倣う)
         入力がどちらなのかによって処理を変える
     出力: 
-        - 出発地・到着地・(あれば)経由地の緯度経度
-        - 検索結果のお店の情報
-            - 緯度経度
-            - 店名
-            - 住所
-            - 予算
-            - 営業時間
-            - 駐車場の有無
-            - ホットペッパーのページのURL
-            - その店がこのユーザにふぁぼられているかどうか
+        - 出発地・到着地・(あれば)経由地の緯度経度points
+            {
+                origin: {lat:0, lng:0}, 
+                destination: {lat:0, lng:0}, 
+                waypoints:[
+                    {lat:0, lng:0}, {lat:1, lng:1}, ...
+                ]
+            }
+        - 検索結果のお店の情報stores
+            - 緯度経度lat, lng
+            - 店名name
+            - 住所address
+            - 予算budget
+            - 営業時間open
+            - 駐車場の有無parking
+            - ホットペッパーのページのURL url
+            - その店がこのユーザにふぁぼられているかどうかis_stared
+        - この2つを1つの辞書にまとめて返す
     処理の実態はsearch_restaurantsとstar_restaurant, unstar_restaurantで
     """
     return
