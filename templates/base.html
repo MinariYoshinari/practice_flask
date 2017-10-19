@@ -28,7 +28,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                               <li><a href="/list/this">Profile</a></li>
-                              
+                              <li class="divider"></li>
                               <li><a href="/list/year">Logout</a></li>
                             </ul>
                           </li>
@@ -38,9 +38,10 @@
                   </nav>
     </header>
     <div class="container">
-      <div class="row">
+      <!-- <div class="row"> -->
         {% block content %}{% endblock %}
-      </div></div>
+      <!-- </div> -->
+    </div>
     <footer>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
