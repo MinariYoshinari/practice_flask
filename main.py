@@ -15,8 +15,9 @@ def search_result():
     GET元: top
     render先: search_result.html?
     入力: 
-        出発地，到着地，(あれば)経由地の地点名
-        またはふぁぼられたお店の一通りの情報
+        {出発地，到着地，(あれば)経由地の地点名}
+        または
+        {starかunstarか, star/unstarされたお店の一通りの情報}
         入力がどちらなのかによって処理を変える
     出力: 
         - 出発地・到着地・(あれば)経由地の緯度経度
@@ -29,7 +30,7 @@ def search_result():
             - 駐車場の有無
             - ホットペッパーのページのURL
             - その店がこのユーザにふぁぼられているかどうか
-    処理の実態はsearch_restaurantsとstar_restaurantで
+    処理の実態はsearch_restaurantsとstar_restaurant, unstar_restaurantで
     """
     return
 
@@ -52,13 +53,23 @@ def search_restaurants():
 
 def star_restaurant():
     """
-    引数　: ふぁぼされたお店の一通りの情報
+    引数　: starされたお店の一通りの情報
     帰り値: なし
     内部処理:
         受け取ったお店の情報をお店テーブルに登録する
         ユーザとふぁぼられたお店を紐付けるテーブルにユーザIDとお店IDを登録する
     """
-    return # レンダリング先はsearch_resultと同じでいいはず……
+    return
+
+
+def unstar_restaurant():
+    """
+    引数　: unstarされたお店の一通りの情報
+    帰り値: なし
+    内部処理:
+        starと逆の処理を行う
+    """
+    return
 
 
 if __name__ == "__main__":
