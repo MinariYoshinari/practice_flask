@@ -51,6 +51,13 @@ def search_restaurants():
     """
     return
 
+def is_stared():
+    """
+    引数　: 緯度と経度……？(お店を一意に特定できるならなんでもいい)
+    返り値: その店がこのユーザにふぁぼられているか否かのbool値
+    """
+    return
+
 def star_restaurant():
     """
     引数　: starされたお店の一通りの情報
