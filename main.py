@@ -37,7 +37,7 @@ def search_result():
             - 駐車場の有無parking
             - ホットペッパーのページのURL url
             - その店がこのユーザにふぁぼられているかどうかis_stared
-        - この2つを1つの辞書にまとめて返す
+        - この2つを1つの辞書resultsにまとめて返す
     処理の実態はsearch_restaurantsとstar_restaurant, unstar_restaurantで
     """
     return
