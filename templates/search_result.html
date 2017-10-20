@@ -4,9 +4,8 @@
     <div id="showmap">
       <div id="map" style="width:620px; height:400px"></div>
       <script type="text/javascript">
-          console.log({{ waypoints | tojson }})
           window.onload = function(){
-          initMap({{ origin.lat }}, {{ origin.lng }}, {{waypoints | tojson}})
+          initMap({{ origin.lat }}, {{ origin.lng }}, {{stores | tojson}})
         }
       </script>
       <script type="text/javascript" src="static/js/showmap.js"></script>
