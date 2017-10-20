@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET'])
 def index():
-    
+
     return render_template("index.html")
 
 @app.route("/search_result", methods=['GET'])
@@ -86,7 +86,6 @@ def unstar_restaurant():
         他にふぁぼってるユーザがいない店ならお店テーブルからも削除する
     """
     return
-
 
 if __name__ == "__main__":
     app.run()

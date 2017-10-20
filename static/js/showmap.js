@@ -11,7 +11,6 @@ function initMap(center_lat, center_lng) {
     var map = new google.maps.Map(document.getElementById("map"), opts);
 
     var m_latlng1 = new google.maps.LatLng(38.26017, 140.871184);
-    
     var marker1 = new google.maps.Marker({
       position: m_latlng1,
       map: map
