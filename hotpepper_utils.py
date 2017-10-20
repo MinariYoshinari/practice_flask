@@ -2,7 +2,7 @@
 緯度経度からなる点ごとに近い飲食店を探す
 """
 
-def search_near_restaurant():
+def search_near_restaurant(lat, lng):
     """
     入力: 緯度と経度
     出力:
