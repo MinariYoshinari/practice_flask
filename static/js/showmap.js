@@ -15,7 +15,12 @@ function initMap(center_lat, center_lng) {
       position: m_latlng1,
       map: map
     });
-
+    infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
+      content: '<div>場所</div>' // 吹き出しに表示する内容
+    });
+    marker.addListener('click', function() { // マーカーをクリックしたとき
+      infoWindow.open(map, marker); // 吹き出しの表示
+    });
 
 
  }
