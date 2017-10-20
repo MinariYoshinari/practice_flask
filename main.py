@@ -43,11 +43,14 @@ def search_result():
 
     origin = {"lat":38.253834, "lng":140.874074}
     destination =  {"lat":38.260132, "lng":140.882438}
+    waypoints = [{"lat":38.260172 , "lng":140.871184, "name":"ぼんてん"},
+                    {"lat":38.261172 , "lng":140.872184, "name":"yaya"}]
     
     return render_template(
         "search_result.html",
         origin = origin,
-        destination = destination    
+        destination = destination,
+        waypoints = waypoints
     )
 
 def search_restaurants():
