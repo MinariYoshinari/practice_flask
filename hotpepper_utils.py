@@ -16,4 +16,4 @@ def search_near_restaurant(lat, lng):
                 - 駐車場の有無
                 - ホットペッパーのページのURL
     """
-    return
+    return []
