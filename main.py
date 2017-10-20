@@ -9,6 +9,13 @@ def index():
     
     return render_template("index.html")
 
+@app.route("/top", methods=['POST'])
+def get_parameters_for_googlemap():
+    """
+    名前の通り,origin,destination,mode,waypoints,alternatives,avoidなどをtopから受け取る
+    :return:受け取ったものを，dictで返す
+    """
+
 @app.route("/search_result", methods=['GET'])
 def search_result():
     """
