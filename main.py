@@ -40,7 +40,15 @@ def search_result():
         - この2つを1つの辞書resultsにまとめて返す
     処理の実態はsearch_restaurantsとstar_restaurant, unstar_restaurantで
     """
-    return
+
+    origin = {"lat":38.253834, "lng":140.874074}
+    destination =  {"lat":38.260132, "lng":140.882438}
+    
+    return render_template(
+        "search_result.html",
+        origin = origin,
+        destination = destination    
+    )
 
 def search_restaurants():
     """
