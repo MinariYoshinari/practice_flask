@@ -4,16 +4,14 @@
     <div id="showmap">
       <div id="map" style="width:620px; height:400px"></div>
       <script type="text/javascript">
-        var origin_lat =  {{ origin.lat }}
-        var origin_lng =  {{ origin.lng }}
-        var destination_lat =  {{ destination.lat }}
-        var destination_lng =  {{ destination.lng }}
-
+          window.onload = function(){
+          initMap({{ origin.lat }}, {{ origin.lng }})
+        }
       </script>
       <script type="text/javascript" src="static/js/showmap.js"></script>
 
       <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-gnYa2ZOb0I78jHrVNDP945SYTW75_3Y&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-gnYa2ZOb0I78jHrVNDP945SYTW75_3Y">
     </script>
   </div>
 {% endblock %}

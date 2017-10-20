@@ -1,10 +1,8 @@
-function initMap(center_lat, center_lng) {
-    var center_lat = (origin_lat + destination_lat)/2;
-    var center_lng = (origin_lng + destination_lng)/2;
+function initMap(lat, lng) {
 
     var opts = {
         zoom: 15,
-        center: new google.maps.LatLng(center_lat, center_lng)
+        center: new google.maps.LatLng(lat, lng)
      };
 
 
